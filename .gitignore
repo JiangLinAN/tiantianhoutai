@@ -8,3 +8,4 @@
 .idea
 # 所有.txt 文件
 *.txt
+/target/
