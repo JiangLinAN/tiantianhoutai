@@ -71,7 +71,7 @@
         success: function (status) {
         alert(status.msg)
         if (status.msg=="登录成功"){
-             location.href="http://localhost:8080/tiantian2Web_war_exploded/user/index"
+             location.href="http://localhost:8080/tiantian2Web_war_exploded/goods/allGoods?num=1"
          }
          },
         error: function () {

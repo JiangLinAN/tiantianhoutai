@@ -2,7 +2,9 @@ package com.noe;
 
 import static org.junit.Assert.assertTrue;
 
+import com.noe.dao.GoodDAO;
 import com.noe.dao.UserDAO;
+import com.noe.pojo.Good;
 import com.noe.pojo.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,5 +22,11 @@ import java.util.List;
 public class AppTest {
     @Autowired
     private UserDAO userDAO;
-
+    @Autowired
+    private GoodDAO goodDAO;
+    @Test
+    public void testGoodDAO(){
+        Integer integer = goodDAO.deleGoodById(16);
+        System.out.println(integer);
+    }
 }

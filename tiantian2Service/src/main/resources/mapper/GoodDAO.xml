@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.noe.dao.GoodDAO">
+    <insert id="insertGood">
+        insert into tiantiansql.t_goods(goodname, simg, bimg, price, "time", mark)
+        values (#{goodName},#{simg},#{bimg},#{price},#{time},#{mark})
+    </insert>
+    <update id="updateGood">
+        update  tiantiansql.t_goods
+        set (goodname=#{goodName},simg=#{simg},bimg=#{bimg},price=#{price},time=#{time},mark=#{mark})
+        where id=#{id}
+    </update>
+    <delete id="deleGoodById">
+        delete from tiantiansql.t_goods where id=#{id}
+    </delete>
+
+
+    <select id="findAllGood" resultType="com.noe.pojo.Good">
+        select *
+        from t_goods
+    </select>
+    <select id="queryGoodById" resultType="com.noe.pojo.Good">
+        select *
+        from tiantiansql.t_goods
+        where id=#{id}
+    </select>
+</mapper>
